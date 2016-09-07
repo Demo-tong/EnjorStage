@@ -1,0 +1,167 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.cardpay-layout {
+    width: 100%;
+    height: 100%;
+}
+
+.cardpay-main {
+    width: 100%;
+    height: 95%;
+    background: #1D88E6 url(/images/bg.jpg) no-repeat bottom center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+}
+
+.cardpay-main-con {
+    display: table;
+    width: 100%;
+    height: 98%;
+}
+
+.cardpay-panel {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.cardpay-form {
+    width: 80%;
+    padding: 0 20px;
+    margin: -10% auto 0;
+}
+
+.cardpay-form > .pui-form-group:first-child {
+    padding-top: 0;
+}
+
+.cardpay-form input[type=text], .cardpay-form input[type=password] {
+    color: #666;
+    padding-left: 36px;
+}
+
+.cardpay-form [role=username], .cardpay-form [role=grade], .cardpay-form [role=mobile] {
+    position: relative;
+}
+
+.cardpay-form [role=username] > .fa, .cardpay-form [role=grade] > .fa, .cardpay-form [role=mobile] > .fa {
+    position: absolute;
+    top:  10px;
+    left: 12px;
+    font-size: 18px;
+}
+
+.cardpay-form [role=sid], .cardpay-form [role=password], .cardpay-form [role=identify] {
+    position: relative;
+}
+
+.cardpay-form [role=sid] > .fa, .cardpay-form [role=password] > .fa, .cardpay-form [role=identify] > .fa {
+    position: absolute;
+    top:  10px;
+    left: 12px;
+    font-size: 18px;
+}
+
+#identify-img {
+    cursor: pointer;
+    position: absolute;
+    top: 7px;
+    right: 10px;
+}
+
+.fa-send {
+    margin-top: -20px;
+}
+
+.pui-btn {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.cardpay-footer {
+    height: 5%;
+    min-height: 50px;
+}
+
+.cardpay-footer > .copyright {
+    padding: 15px 0;
+}
+
+@media (max-width: 1024px) {
+
+    input[type=text], input[type=password] {
+        padding: 12px 16px;
+    }
+
+    .pui-btn {
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .cardpay-footer {
+        min-height: 80px;
+    }
+
+    .cardpay-footer > .copyright {
+        padding: 15px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .cardpay-form {
+        width: 50%;
+    }
+
+    .pui-btn {
+        width: 100px;
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .cardpay-form {
+        margin-top: 0;
+        width: 36%;
+    }
+}
+
+@media (min-width: 1025px) {
+    .cardpay-form {
+        margin-top: 0;
+        width: 28%;
+    }
+
+    .cardpay-form [role=sid] > .fa, .cardpay-form [role=password] > .fa, .cardpay-form [role=identify] > .fa {
+        top:  10px;
+    }
+
+    .cardpay-form [role=username] > .fa, .cardpay-form [role=grade] > .fa, .cardpay-form [role=mobile] > .fa {
+        top:  10px;
+    }
+
+    #identify-img {
+        top: 7px;
+    }
+
+    .pui-btn {
+        padding-top: 6px;
+        padding-bottom: 6px;
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: landscape) {
+    body, html {
+    }
+}
