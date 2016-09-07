@@ -11,8 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title>登录页面</title>
 
-    <link rel="stylesheet" type="text/css" href="./css/planeui.min.css" />
-	<link rel='stylesheet' href='./css/login.css'>
+    <link rel="stylesheet" type="text/css" href="../css/planeui.min.css" />
+	<link rel='stylesheet' href='../css/login.css'>
 </head>
 <body>
 <!--[if lte IE 9]>
@@ -70,14 +70,14 @@
 
 <!--[if lt IE 9]>
 <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-<script type="text/javascript" src="./js/planeui.patch.ie8.js"></script>
+<script type="text/javascript" src="../js/planeui.patch.ie8.js"></script>
 <![endif]-->
 
 <!--[if lt IE 10]>
-<script type="text/javascript" src="./js/planeui.patch.ie9.js"></script>
+<script type="text/javascript" src="js/planeui.patch.ie9.js"></script>
 <![endif]-->
-<script type="text/javascript" src="./js/planeui.js"></script>
-<script src='./js/login.js'></script>
+<script type="text/javascript" src="../js/planeui.js"></script>
+<script src='../js/login.js'></script>
 
 </body>
 </html>

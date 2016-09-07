@@ -1,5 +1,6 @@
 package com.enjoyStage.controller;
 
+import java.io.Console;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,20 +12,30 @@ import com.enjoyStage.entity.User;
 import com.enjoyStage.service.IUserService;
 
 @Controller
-@RequestMapping(value="/user")
+@RequestMapping(value = "/user")
 public class UserController {
 
-	@Autowired
-	private IUserService userService;
-	
-	@RequestMapping(value="/list")
-	public ModelAndView list(){
-		List<User> userList = userService.findAll();
+	@RequestMapping(value = "/login")
+	public ModelAndView login() {
 		ModelAndView mv = new ModelAndView();
-
-		mv.addObject("list", userList);
-		mv.setViewName("list");
-		
+		mv.setViewName("login");
 		return mv;
 	}
+
+	@RequestMapping(value = "/regist")
+	public ModelAndView regist() {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("regist");
+		return mv;
+	}
+	/*
+	 * @Autowired private IUserService userService;
+	 * 
+	 * @RequestMapping(value="/list") public ModelAndView list(){ List<User>
+	 * userList = userService.findAll(); ModelAndView mv = new ModelAndView();
+	 * 
+	 * mv.addObject("list", userList); mv.setViewName("list");
+	 * 
+	 * return mv; }
+	 */
 }
