@@ -16,7 +16,6 @@
 	<!-- 静态资源文件配置 -->
 	<mvc:resources location="/img/" mapping="/img/**"/>
 	<mvc:resources location="/css/" mapping="/css/**"/>
-	<mvc:resources location="/WEB-INF/page/" mapping="/WEB-INF/page/**"/>
 	<!-- <mvc:resources location="/jquery-2.1.4/" mapping="/jquery-2.1.4/**"/> -->
 	
 	<!-- 拦截器配置 -->

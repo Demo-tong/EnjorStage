@@ -51,9 +51,15 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 
-	<servlet-mapping>
+	<!-- <servlet-mapping>
 		<servlet-name>springmvc</servlet-name>
 		<url-pattern>/</url-pattern>
+	</servlet-mapping> -->
+	
+	<!-- 后缀为do的丢给总控制器分发任务 -->
+	<servlet-mapping>
+		<servlet-name>springmvc</servlet-name>
+		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
 
 	<!-- 配置日志文件 -->
