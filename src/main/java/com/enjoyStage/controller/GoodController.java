@@ -14,4 +14,18 @@ public class GoodController {
 			mv.setViewName("goodsDetails");
 			return mv;
 		}
+		
+		@RequestMapping("/alipay")
+		public ModelAndView alipay(){
+			ModelAndView mv=new ModelAndView();
+			mv.setViewName("alipay");
+			return mv;
+		}
+		
+		@RequestMapping("/cardpay")
+		public ModelAndView cardpay(){
+			ModelAndView mv=new ModelAndView();
+			mv.setViewName("cardpay");
+			return mv;
+		}
 }

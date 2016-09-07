@@ -10,9 +10,10 @@
 <link href="../css/bootstrap-3.3.5/dist/css/bootstrap.min.css"
 	rel="stylesheet">
 <style type="text/css">
-body{
-	background-color:#1D88E6;
+body {
+	background-color: #1D88E6;
 }
+
 #title {
 	text-align: center;
 	border-bottom: 1px solid #666;
@@ -69,7 +70,9 @@ body{
 	<div class="col-sm-5">
 		<p id="time">分期时间:</p>
 		<div id="a-list">
-			<a href="#">一月</a><a href="#">二月</a><a href="#">三月</a>
+			<a href="#" style="padding: 0 20px 10px; color: black">一月</a> <a
+				href="#" style="padding: 0 20px 10px; color: black">二月</a> <a
+				href="#" style="padding: 0 20px 10px; color: black">三月</a>
 		</div>
 	</div>
 	</section>
@@ -84,7 +87,13 @@ body{
 		</form>
 	</div>
 	<div class="col-sm-4" style="float: right">
-		<button class="btn btn-primary">点击购买</button>
+		<span>请选择您的付款方式：</span><br> <a
+			href="${pageContext.request.contextPath }/good/alipay">
+			<button class="btn btn-primary">支付宝</button>
+		</a> <a href="${pageContext.request.contextPath }/good/cardpay">
+			<button class="btn btn-primary">银行卡</button>
+		</a>
+		<!-- <button class="btn btn-primary">点击购买</button> -->
 	</div>
 	</section>
 	<hr>
