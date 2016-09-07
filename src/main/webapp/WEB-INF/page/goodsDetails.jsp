@@ -11,7 +11,7 @@
 	rel="stylesheet">
 <style type="text/css">
 body{
-background-color:#444;
+	background-color:#1D88E6;
 }
 #title {
 	text-align: center;
