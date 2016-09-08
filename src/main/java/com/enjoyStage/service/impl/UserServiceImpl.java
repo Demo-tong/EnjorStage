@@ -20,19 +20,18 @@ public class UserServiceImpl implements IUserService {
 		if(user!=null){
 			bool=true;
 		}
-		System.out.println("bool"+bool);
 		return bool;
 	}
 	
 	public boolean insertUser(String username, String password, String password_t){
-		//ÏÈÅÐ¶ÏÓÃ»§Á½´ÎÊäÈëÃÜÂëÊÇ·ñÒ»ÖÂ
+		//先判断用户两次输入密码是否一致
 		if(password.equals(password_t) == false){
-			// ÃÜÂë²»Ò»ÖÂ´íÎó
+			// 密码不一致返回false
 			return false;
 		}else{
 			/*
-			 * Í¨¹ýµ÷ÓÃinsertUser·½·¨£¬ÔÚÆäÖÐÅÐ¶Ï×¢²áÃûÊÇ·ñºÏ·¨¡£
-			 * ÈôºÏ·¨£¬Ôò²åÈëÊý¾Ý¿âÖÐ£¬·µ»Øtrue£»·ñÔò£¬×¢²áÊ§°Ü·µ»Øfalse¡£
+			 * 通过调用insertUser方法，在其中判断注册名是否合法
+			 * 若合法，则插入数据库中，返回true；否则，注册失败返回false
 			 */
 			return userDao.insertUser(username, password);
 		}
