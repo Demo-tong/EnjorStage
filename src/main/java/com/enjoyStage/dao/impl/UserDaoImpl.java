@@ -16,45 +16,54 @@ public class UserDaoImpl implements IUserDAO {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 
+	/*
+	 * 功能：在用户表中查找用户是否存在，密码是否正确
+	 * 参数： username and password
+	 * */
 	public User selectByUsername(String username, String password) {
 			String sql = "select * from users where username='" + username + "' and password= '" + password + "'";
-			System.out.println("sql" + sql);
 			try {
 				User result = jdbcTemplate.queryForObject(sql, BeanPropertyRowMapper.newInstance(User.class));
-				System.out.println(result);
 				return result;
 			} catch (Exception e) {
-				System.out.println("fghjklkjhgfdfghjkjhgfcdxfghjkjhgfcdxfgyhujk");
 				return null;
 			}
 	}
 
+	/*
+	 * 功能：在用户表中查找用户注册名是否已经存在
+	 * 参数：username and password
+	 * @see com.enjoyStage.dao.IUserDAO#insertUser(java.lang.String, java.lang.String)
+	 */
 	public boolean insertUser(String username, String password){
-		// ÔÚÓÃ»§±íÖÐÑ°ÕÒ×¢²áÃûÊÇ·ñÒÑ¾­´æÔÚ
+		// 在用户表中查找注册是否已经存在
 		String sql="select * from users where username='"+username+"'";
 		
-		// ½«Ëù²éÑ¯µÄ½á¹ûÓ³ÉäÔÚlistÖÐ
+		// 将所查询到的结果映射到list中
 		List<User> list=jdbcTemplate.query(sql,new BeanPropertyRowMapper(User.class));
 						
 		if(list.size()==0){
-			// listÖÐÃ»ÓÐÐÅÏ¢£¬Ôò±íÃ÷Êý¾Ý¿âÖÐ²»´æÔÚ´ËÓÃ»§Ãû³Æ£¬Òò´Ë´ËÓÃ»§ÃûºÏ·¨
+			// list中没有信息，则表明数据库中不存在此用户名，因此该用户名合法
 			sql="insert into users(username,password,email,telephone,address) "+"values('"+username+"','"+password+"','123@qq.com','12345','12345')";
 			if (jdbcTemplate.update(sql)!=0) {
-				// ×¢²á³É¹¦
+				// 注册成功
 				return true;
 			}
 		}
 		
 		else{
-			// Èç¹ûÊý¾Ý¿âÖÐÒÑ¾­´æÔÚ¸ÃÓÃ»§Ãû£¬Ôò²»ÄÜ¹»×¢²á
-			// ×¢²áÊ§°Ü
+			/*
+			 * 注册失败
+			 * 如果数据库中已经存在该用户名，则不能注册
+			 */
 			return false;
 		}
 		return false;
 	}
 	
 	public List<User> findAll() {
+		String sql = "select * from users";
 		// TODO Auto-generated method stub
-		return null;
+		return jdbcTemplate.query(sql, new BeanPropertyRowMapper(User.class));
 	}
 }
