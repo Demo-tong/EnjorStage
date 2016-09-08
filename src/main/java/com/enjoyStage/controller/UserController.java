@@ -15,27 +15,47 @@ import com.enjoyStage.service.IUserService;
 @RequestMapping(value = "/user")
 public class UserController {
 
-	@RequestMapping(value = "/login")
-	public ModelAndView login() {
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("login");
+	@Autowired
+	private IUserService userService;
+	
+	@RequestMapping(value="/loginRequest")
+	public ModelAndView loginRequest(String username, String password){
+		
+		boolean bool = userService.selectByUsername(username, password);
+		
+		ModelAndView mv=new ModelAndView();
+		if(bool){
+			mv.setViewName("homepage");
+		}else{
+			mv.setViewName("login");
+		}
 		return mv;
 	}
-
-	@RequestMapping(value = "/regist")
-	public ModelAndView regist() {
+	
+	@RequestMapping(value="/registRequest")
+	public ModelAndView registRequest(String username, String password, String password_t){
+		ModelAndView mv = new ModelAndView();
+		boolean bool = userService.insertUser(username, password, password_t);
+		if(bool){
+			mv.setViewName("login");
+		}else{
+			mv.setViewName("regist");
+		}
+		return mv;
+	}
+	
+	@RequestMapping(value="/registLoad")
+	public ModelAndView registLoad(){
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("regist");
 		return mv;
 	}
-	/*
-	 * @Autowired private IUserService userService;
-	 * 
-	 * @RequestMapping(value="/list") public ModelAndView list(){ List<User>
-	 * userList = userService.findAll(); ModelAndView mv = new ModelAndView();
-	 * 
-	 * mv.addObject("list", userList); mv.setViewName("list");
-	 * 
-	 * return mv; }
-	 */
+	
+	@RequestMapping(value="/loginLoad")
+	public ModelAndView loginLoad(){
+		System.out.println("1111");
+		ModelAndView mv=new ModelAndView();
+		mv.setViewName("login");
+		return mv;
+	}
 }

@@ -28,7 +28,7 @@
         <div class="pui-layout pui-flex login-main">
             <div class="pui-layout pui-layout-fixed pui-layout-fixed-1200 login-main-con">
                 <div class="login-panel">
-                    <form id="login" name="login" class="pui-form login-form" action="?a=Update" method="post">
+                    <form id="login" name="login" class="pui-form login-form" action="${pageContext.request.contextPath }/user/registRequest" method="post">
                         <div class="pui-form-group">
                             <h1 class="pui-text-white pui-text-normal">
                                 <i class="fa fa-cart-arrow-down fa-2x pui-text-xxxxxxl"></i> 趣分期项目注册
@@ -38,7 +38,7 @@
                         <div class="pui-form-group">
                             <div role="sid">
 
-                                <input type="text" name="sid" class="pui-unbordered" maxlength="16" placeholder="您的用户名">
+                                <input type="text" name="username" class="pui-unbordered" maxlength="16" placeholder="您的用户名">
                                 <i class="fa fa-send-o pui-text-blue"></i>
                             </div>
                         </div>

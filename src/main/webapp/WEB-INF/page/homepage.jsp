@@ -12,13 +12,13 @@
 	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 <title>趣分期</title>
 
-<link rel="stylesheet" type="text/css" href="css/planeui.min.css" />
-<link rel="stylesheet" type="text/css" href="css/login.css">
-<link rel="stylesheet" type="text/css" href="css/buttons.css">
+<link rel="stylesheet" type="text/css" href="../css/planeui.min.css" />
+<link rel="stylesheet" type="text/css" href="../css/login.css">
+<link rel="stylesheet" type="text/css" href="../css/buttons.css">
 
-<link rel="stylesheet" href="css/bootstrap-3.3.5/dist/css/bootstrap.min.css">
-<script src="css/bootstrap-3.3.5/dist/js/jquery.min.js"></script>
-<script src="css/bootstrap-3.3.5/dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../css/bootstrap-3.3.5/dist/css/bootstrap.min.css">
+<script src="../css/bootstrap-3.3.5/dist/js/jquery.min.js"></script>
+<script src="../css/bootstrap-3.3.5/dist/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<!--[if lte IE 9]>
@@ -44,20 +44,20 @@
 							</h1>
 						</div>
 
-						<form action="${pageContext.request.contextPath  }/user/loginLoad" method="post">
+						<form action="${pageContext.request.contextPath  }/user/login">
 							<div class="pui-form-group input_submit pui-grid-xxl-offset-4"
 								style="position: absolute; left: 70px; top: 0px;">
 								<button type="submit" id="submit"
 									class="button  button-rounded button-lowercase button-primary"
 									style="width: 150px;" name="login">
-									<i class="fa fa-user"></i> 登录
+									 师悦
 								</button>
 							</div>
 						</form>
 
 
-						<form action="${pageContext.request.contextPath  }/user/registLoad"
-							method="post">
+						<form action="${pageContext.request.contextPath  }/user/regist"
+							method="get">
 							<div class="pui-form-group input_submit pui-grid-xxl-offset-4"
 								style="position: absolute; left: 70px; top: 50px;">
 
@@ -84,27 +84,27 @@
 							<div class="carousel-inner" role="listbox">
 								<div class="item active">
 									<a href="${pageContext.request.contextPath }/good/doDetail">
-										<img src="img/coolpad/coolpad.jpg" alt="Coolpad">
+										<img src="../img/coolpad/coolpad.jpg" alt="Coolpad">
 									</a>
 									<div class="carousel-caption"></div>
 								</div>
 								<div class="item">
 									<a href="${pageContext.request.contextPath }/good/doDetail">
-										<img src="img/iphone/iphone.jpg" alt="iphone">
+										<img src="../img/iphone/iphone.jpg" alt="iphone">
 									</a>
 									<div class="carousel-caption"></div>
 								</div>
 
 								<div class="item">
 									<a href="${pageContext.request.contextPath }/good/doDetail">
-										<img src="img/letv/letv.jpg" alt="letv">
+										<img src="../img/letv/letv.jpg" alt="letv">
 										<div class="carousel-caption"></div>
 									</a>
 								</div>
 
 								<div class="item">
 									<a href="${pageContext.request.contextPath }/good/doDetail">
-										<img src="img/mi/mi.jpg" alt="mi">
+										<img src="../img/mi/mi.jpg" alt="mi">
 									</a>
 									<div class="carousel-caption"></div>
 								</div>
