@@ -57,17 +57,6 @@ body {
 	</section>
 	<section class="row info-section">
 	<div class="col-sm-5">
-		<form class="form-inline">
-			<div class="form-group">
-				<label for="exampleInputName2">首付比例:</label> <input type="text"
-					class="form-control" id="exampleInputName2" placeholder="Jane Doe">
-			</div>
-			<button type="submit" class="btn btn-default">提交</button>
-		</form>
-	</div>
-	</section>
-	<section class="row info-section">
-	<div class="col-sm-5">
 		<p id="time">分期时间:</p>
 		<div id="a-list">
 			<a href="#" style="padding: 0 20px 10px; color: black">一月</a> <a
@@ -77,23 +66,8 @@ body {
 	</div>
 	</section>
 	<section class="row info-section">
-	<div class="col-sm-5">
-		<form class="form-inline">
-			<div class="form-group">
-				<label for="exampleInputName2">需要付款:</label> <input type="text"
-					class="form-control" id="exampleInputName2" placeholder="Jane Doe">
-			</div>
-			<button type="submit" class="btn btn-default">提交</button>
-		</form>
-	</div>
-	<div class="col-sm-4" style="float: right">
-		<span>请选择您的付款方式：</span><br> <a
-			href="${pageContext.request.contextPath }/good/alipay">
-			<button class="btn btn-primary">支付宝</button>
-		</a> <a href="${pageContext.request.contextPath }/good/cardpay">
-			<button class="btn btn-primary">银行卡</button>
-		</a>
-		<!-- <button class="btn btn-primary">点击购买</button> -->
+	<div class="col-sm-4" style="float: right;margin-bottom:20px">
+		<a href="#"><button class="btn btn-primary">点击购买</button></a>
 	</div>
 	</section>
 	<hr>
