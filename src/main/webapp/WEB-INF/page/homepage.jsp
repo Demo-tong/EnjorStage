@@ -44,19 +44,19 @@
 							</h1>
 						</div>
 
-						<form action="${pageContext.request.contextPath  }/user/login">
+						<form action="${pageContext.request.contextPath  }/user/loginLoad">
 							<div class="pui-form-group input_submit pui-grid-xxl-offset-4"
 								style="position: absolute; left: 70px; top: 0px;">
 								<button type="submit" id="submit"
 									class="button  button-rounded button-lowercase button-primary"
 									style="width: 150px;" name="login">
-									 师悦
+									 登录
 								</button>
 							</div>
 						</form>
 
 
-						<form action="${pageContext.request.contextPath  }/user/regist"
+						<form action="${pageContext.request.contextPath  }/user/registLoad"
 							method="get">
 							<div class="pui-form-group input_submit pui-grid-xxl-offset-4"
 								style="position: absolute; left: 70px; top: 50px;">
