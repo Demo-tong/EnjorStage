@@ -25,6 +25,7 @@ public class UserController {
 		
 		ModelAndView mv=new ModelAndView();
 		if(bool){
+			mv.addObject("username", username);
 			mv.setViewName("homepage");
 		}else{
 			mv.setViewName("login");

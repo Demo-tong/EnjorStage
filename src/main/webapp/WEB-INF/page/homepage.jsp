@@ -51,7 +51,8 @@
 								<button type="submit" id="submit"
 									class="button  button-rounded button-lowercase button-primary"
 									style="width: 150px;" name="login">
-									 登录
+									<%String name =request.getParameter("username"); %>
+									 <%= name != null ? name : "denglu" %>
 								</button>
 							</div>
 						</form>
