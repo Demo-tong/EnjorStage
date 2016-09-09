@@ -15,6 +15,7 @@
 <link rel="stylesheet" type="text/css" href="../css/planeui.min.css" />
 <link rel="stylesheet" type="text/css" href="../css/login.css">
 <link rel="stylesheet" type="text/css" href="../css/buttons.css">
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
 
 <link rel="stylesheet" href="../css/bootstrap-3.3.5/dist/css/bootstrap.min.css">
 <script src="../css/bootstrap-3.3.5/dist/js/jquery.min.js"></script>
@@ -127,15 +128,60 @@
 				</div>
 			</div>
 		</div>
-		<footer
-			class="pui-layout pui-layout-fixed pui-layout-fixed-1200 login-footer">
-		<div class="copyright">
-			<p>
-				Copyright <i class="fa fa-copyright"></i> 2016 趣分期项目 All Rights
-				Reserved. <small class="pui-right"></small>
-			</p>
+		<!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓3列菜单开始↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
+		<div class="btn3 clearfix">
+
+			<div class="menu" style="text-align: center">
+				<div class="bt-name" style="text-align: center">
+					<a href="javascript:;"><i class="fa fa-home"></i> 首页</a>
+				</div>
+			</div>
+			<!--menu-->
+
+
+			<div class="menu">
+				<div class="bt-name" style="text-align: center">
+					<a href="javascript:;"><i class="fa fa-shopping-cart"></i> 购物车</a>
+				</div>
+			</div>
+			<!--menu-->
+
+
+			<div class="menu">
+				<div class="bt-name" style="text-align: center">
+					<i class="fa fa-user"></i> 个人中心
+				</div>
+				<div class="sanjiao"></div>
+				<div class="new-sub">
+					<ul>
+						<li><a href="javascript:;">地址管理</a></li>
+						<li><a href="javascript:;">订单管理</a></li>
+						<li><a href="javascript:;">账户管理</a></li>
+					</ul>
+					<div class="tiggle"></div>
+					<div class="innertiggle"></div>
+				</div>
+			</div>
+			<!--menu-->
+
 		</div>
-		</footer>
+		<!--btn3-->
+		<!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑3列菜单end↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
+		<script type="text/javascript">
+			//弹出垂直菜单
+			$(".menu").click(function() {
+				if ($(this).hasClass("cura")) {
+					$(this).children(".new-sub").hide(); //当前菜单下的二级菜单隐藏
+					$(".menu").removeClass("cura"); //同一级的菜单项
+				} else {
+					$(".menu").removeClass("cura"); //移除所有的样式
+					$(this).addClass("cura"); //给当前菜单添加特定样式
+					$(".menu").children(".new-sub").slideUp("fast"); //隐藏所有的二级菜单
+					$(this).children(".new-sub").slideDown("fast"); //展示当前的二级菜单
+				}
+			});
+		</script>
+
 	</div>
 
 	<!--[if (gte IE 9) | !(IE)]><!-->
