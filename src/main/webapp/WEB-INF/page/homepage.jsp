@@ -50,9 +50,9 @@
 								style="position: absolute; left: 70px; top: 0px;">
 								<button type="submit" id="submit"
 									class="button  button-rounded button-lowercase button-primary"
-									style="width: 150px;" name="login">
+									style="width: 150px;" name="login"><i class="fa fa-user-plus"></i>
 									<%String name =request.getParameter("username"); %>
-									 <%= name != null ? name : "denglu" %>
+									 <%= name != null ? name : "登录" %>
 								</button>
 							</div>
 						</form>
