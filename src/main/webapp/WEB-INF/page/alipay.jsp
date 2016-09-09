@@ -28,7 +28,7 @@
   <div class="pui-layout pui-flex alipay-main">
     <div class="pui-layout pui-layout-fixed pui-layout-fixed-1200 alipay-main-con">
       <div class="alipay-panel">
-        <form id="alipay" name="alipay" class="pui-form alipay-form" action="?a=Update" method="post">
+        <form id="alipay" name="alipay" class="pui-form alipay-form" action="${pageContext.request.contextPath }/order/alipayLoad" method="post">
           <div class="pui-form-group">
             <h1 class="pui-text-white pui-text-normal">
               <i class="fa fa-cart-arrow-down fa-2x pui-text-xxxxxxl"></i> 登录支付宝

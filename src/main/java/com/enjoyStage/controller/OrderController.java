@@ -13,4 +13,11 @@ public class OrderController {
 		mv.setViewName("alipay");
 		return mv;
 	}
+	
+	@RequestMapping(value="/alipayLoad")
+	public ModelAndView alipayLoad(){
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("payconfirm");
+		return mv;
+	}
 }

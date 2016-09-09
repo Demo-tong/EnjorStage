@@ -7,13 +7,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 /**
  * 类说明
- * @author Afar
  * @time Sep 9, 2016
  */
 public class DbTool {
 	
 			
-	private static final String DB_NAME = "enjoystage";// ���ݿ������
+	private static final String DB_NAME = "enjoystage";
 	private static final String DB_DRIVER = "com.mysql.jdbc.Driver";
 	private static String DB_URL = "jdbc:mysql://127.0.0.1:3306/" + DB_NAME+ "?useUnicode=true&characterEncoding=utf8&useSSL=true";
 	
@@ -24,7 +23,6 @@ public class DbTool {
 	static {
 		try {
 			Class.forName(DB_DRIVER).newInstance();
-			System.out.println("******************������������");
 		} catch (InstantiationException e) {
 			e.printStackTrace();
 			System.out.println(e.getMessage());
@@ -40,7 +38,7 @@ public class DbTool {
 	public static Connection getConnection() {
 
 		try {
-			connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PWD);// ������䲻�ܷ���static�������
+			connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PWD);
 
 			if (connection != null) {
 				System.out.println("��ȡ���ݿ�����->DB:   " + DB_NAME);
