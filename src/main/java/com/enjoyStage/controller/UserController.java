@@ -53,7 +53,6 @@ public class UserController {
 	
 	@RequestMapping(value="/loginLoad")
 	public ModelAndView loginLoad(){
-		System.out.println("1111");
 		ModelAndView mv=new ModelAndView();
 		mv.setViewName("login");
 		return mv;
