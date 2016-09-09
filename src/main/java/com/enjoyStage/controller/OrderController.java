@@ -8,29 +8,30 @@ import org.springframework.web.servlet.ModelAndView;
 import com.enjoyStage.service.IOrderService;
 
 @Controller
-@RequestMapping(value="/order")
+@RequestMapping(value = "/order")
 public class OrderController {
-	
+
 	@Autowired
 	private IOrderService orderService;
-	
-	@RequestMapping(value="/payLoad")
-	public ModelAndView payLoad(){
+
+	@RequestMapping(value = "/payLoad")
+	public ModelAndView payLoad() {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("alipay");
 		return mv;
 	}
-	
-	@RequestMapping(value="/alipayLoad")
-	public ModelAndView alipayLoad(String aliuser, String password){
-		
+
+	@RequestMapping(value = "/alipayLoad")
+	public ModelAndView alipayLoad(String aliuser, String password) {
+
 		boolean bool = orderService.selectByAliuser(aliuser, password);
-		
+
 		ModelAndView mv = new ModelAndView();
-		
-		if(bool){
+
+		if (bool) {
+			//orderService.insertOrder(aliuser);
 			mv.setViewName("payconfirm");
-		}else{
+		} else {
 			mv.setViewName("alipay");
 		}
 		return mv;
