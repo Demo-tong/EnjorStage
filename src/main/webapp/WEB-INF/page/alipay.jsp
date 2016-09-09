@@ -38,7 +38,7 @@
           <div class="pui-form-group">
             <div role="sid">
 
-              <input type="text" name="sid" class="pui-unbordered" maxlength="16" placeholder="您的账户名">
+              <input type="text" name="aliuser" class="pui-unbordered" maxlength="16" placeholder="您的账户名">
               <i class="fa fa-user pui-text-blue"></i>
             </div>
           </div>
