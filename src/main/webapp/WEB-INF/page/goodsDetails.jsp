@@ -67,7 +67,7 @@ body {
 	</section>
 	<section class="row info-section">
 	<div class="col-sm-4" style="float: right;margin-bottom:20px">
-		<a href="#"><button class="btn btn-primary">点击购买</button></a>
+		<a href="${pageContext.request.contextPath}/good/orderSure"><button class="btn btn-primary">点击购买</button></a>
 	</div>
 	</section>
 	<hr>
