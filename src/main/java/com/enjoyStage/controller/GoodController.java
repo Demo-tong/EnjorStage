@@ -15,17 +15,10 @@ public class GoodController {
 			return mv;
 		}
 		
-		@RequestMapping("/alipay")
-		public ModelAndView alipay(){
+		@RequestMapping("/orderSure")
+		public ModelAndView orderSure(){
 			ModelAndView mv=new ModelAndView();
-			mv.setViewName("alipay");
-			return mv;
-		}
-		
-		@RequestMapping("/cardpay")
-		public ModelAndView cardpay(){
-			ModelAndView mv=new ModelAndView();
-			mv.setViewName("cardpay");
+			mv.setViewName("order");
 			return mv;
 		}
 }
