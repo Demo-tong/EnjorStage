@@ -31,7 +31,7 @@
         <form id="alipay" name="alipay" class="pui-form alipay-form" action="${pageContext.request.contextPath }/order/alipayLoad" method="post">
           <div class="pui-form-group">
             <h1 class="pui-text-white pui-text-normal">
-              <i class="fa fa-cart-arrow-down fa-2x pui-text-xxxxxxl"></i> 登录支付宝
+              <i class="fa fa-cart-arrow-down fa-2x pui-text-xxxxxxl"></i> 支付确认
             </h1>
           </div>
 
