@@ -51,7 +51,7 @@
 								小计：<span style="color:red">${price}元</span>
 							</div>
 							<div>
-								分期月数：${inlineRadioOptions}个月
+								分期月数：<span style="color:red">${inlineRadioOptions}</span>
 							</div>
 							<div>
 								月供：<span style="color:red">1000元</span>

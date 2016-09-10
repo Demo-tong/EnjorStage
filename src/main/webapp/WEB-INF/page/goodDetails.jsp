@@ -25,28 +25,33 @@
 
 	</div>
 	</section>
+	<form action="${pageContext.request.contextPath}/good/orderSure?price=${good.price}&goodID=${good.goodID}" method="post">
 	<section class="row info-section">
 	<div class="col-sm-5">
 		<p id="time">分期时间:</p>
 		<div id="a-list">
 			<label class="radio-inline"> <input type="radio"
-				name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>一月
+				name="inlineRadioOptions" id="inlineRadio1" value="不分期" checked>不分期
 			</label> <label class="radio-inline"> <input type="radio"
-				name="inlineRadioOptions" id="inlineRadio2" value="option2">二月
+				name="inlineRadioOptions" id="inlineRadio2" value="三月">三月
 			</label> <label class="radio-inline"> <input type="radio"
-				name="inlineRadioOptions" id="inlineRadio3" value="option3">三月
+				name="inlineRadioOptions" id="inlineRadio3" value="六月">六月
+			</label>
+			<label class="radio-inline"> <input type="radio"
+				name="inlineRadioOptions" id="inlineRadio4" value="九月">九月
+			</label>
+			<label class="radio-inline"> <input type="radio"
+				name="inlineRadioOptions" id="inlineRadio5" value="十二月">十二月
 			</label>
 		</div>
 	</div>
 	</section>
 	<section class="row info-section">
 	<div class="col-sm-4" style="float: right; margin-bottom: 20px">
-		<a
-			href="${pageContext.request.contextPath}/good/orderSure?storagerate=${coolPad.storagerate}&price=${coolPad.price}&inlineRadioOptions=${inlineRadioOptions}">
-			<button class="btn btn-primary">点击购买</button>
-		</a>
+			<button type="submit" class="btn btn-primary">点击购买</button>
 	</div>
 	</section>
+	</form>
 	<hr>
 	<footer calss="row">
 	<div class="col-sm-6">
