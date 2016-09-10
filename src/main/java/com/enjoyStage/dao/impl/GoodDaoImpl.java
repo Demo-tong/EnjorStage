@@ -18,7 +18,6 @@ public class GoodDaoImpl implements IGoodDAO{
 		String sql = "select * from goods where goodID='"+id+"'";
 		try{
 			Good result = jdbcTemplate.queryForObject(sql, BeanPropertyRowMapper.newInstance(Good.class));
-			System.out.println("result+++++++++++++++++"+result);
 			return result;
 		}catch (Exception e){
 			return null;

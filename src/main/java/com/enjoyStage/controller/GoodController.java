@@ -25,8 +25,11 @@ public class GoodController {
 	}
 
 	@RequestMapping("/orderSure")
-	public ModelAndView orderSure(String inlineRadioOptions) {
+	public ModelAndView orderSure(double price, Good good, String inlineRadioOptions) {
 		ModelAndView mv = new ModelAndView();
+		
+		mv.addObject("price", price);
+		mv.addObject("inlineRadioOptions", inlineRadioOptions);
 		mv.setViewName("order");
 		return mv;
 	}
