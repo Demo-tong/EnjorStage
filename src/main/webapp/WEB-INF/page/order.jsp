@@ -45,13 +45,13 @@
 						<div class="row">
 							<div class="col-md-6">
 								<div>【金色24期免息】vivo X7 全网通 4GB+64GB 移动联通电信4G手机 金色 4G+64G 全网通</div>
-								<div>单价：3000元&nbsp;&nbsp;&nbsp;数量 X 1</div>
+								<div>单价：${price}&nbsp;&nbsp;&nbsp;数量 X 1</div>
 							</div>
 							<div class="col-md-3" style="float:right">
-								小计：<span style="color:red">3000元</span>
+								小计：<span style="color:red">${price}元</span>
 							</div>
 							<div>
-								分期月数：3个月
+								分期月数：${inlineRadioOptions}个月
 							</div>
 							<div>
 								月供：<span style="color:red">1000元</span>
