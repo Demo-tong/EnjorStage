@@ -17,7 +17,7 @@ public class DbTool {
 	private static String DB_URL = "jdbc:mysql://127.0.0.1:3306/" + DB_NAME+ "?useUnicode=true&characterEncoding=utf8&useSSL=true";
 	
 	private static final String DB_USER = "root";
-	private static final String DB_PWD = "tongyang";
+	private static final String DB_PWD = "123456";
 	private static Connection connection = null;
 
 	static {

@@ -53,12 +53,16 @@
 
 						<div class="pui-form-group">
 							<div role="password">
-								<span style="float:left" class="glyphicon glyphicon-lock form-control-feedback"></span> <input type="password"
-									name="password" maxlength="16" class="pui-unbordered"
-									placeholder="您的密码" />
+								<span style="float: left"
+									class="glyphicon glyphicon-lock form-control-feedback"></span>
+								<input type="password" name="password" maxlength="16"
+									class="pui-unbordered" placeholder="您的密码" />
 
 							</div>
 						</div>
+						<span style="color: red"> 
+						${bool }
+						</span>
 
 						<div class="pui-form-group input_submit">
 							<button type="submit" id="submit"

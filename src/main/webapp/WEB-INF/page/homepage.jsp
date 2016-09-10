@@ -85,28 +85,28 @@
 							<!-- Wrapper for slides 轮播项目-->
 							<div class="carousel-inner" role="listbox">
 								<div class="item active">
-									<a href="${pageContext.request.contextPath }/good/doDetail">
-										<img src="../img/coolpad/coolpad.jpg" alt="Coolpad">
+									<a href="${pageContext.request.contextPath }/good/doDetail?id=1">
+										<img src="../img/coolpad/1.jpg" alt="Coolpad">
 									</a>
 									<div class="carousel-caption"></div>
 								</div>
 								<div class="item">
-									<a href="${pageContext.request.contextPath }/good/doDetail">
-										<img src="../img/iphone/iphone.jpg" alt="iphone">
+									<a href="${pageContext.request.contextPath }/good/doDetail?id=2">
+										<img src="../img/iphone/1.jpg" alt="iphone">
 									</a>
 									<div class="carousel-caption"></div>
 								</div>
 
 								<div class="item">
-									<a href="${pageContext.request.contextPath }/good/doDetail">
-										<img src="../img/letv/letv.jpg" alt="letv">
+									<a href="${pageContext.request.contextPath }/good/doDetail?id=3">
+										<img src="../img/letv/1.jpg" alt="letv">
 										<div class="carousel-caption"></div>
 									</a>
 								</div>
 
 								<div class="item">
-									<a href="${pageContext.request.contextPath }/good/doDetail">
-										<img src="../img/mi/mi.jpg" alt="mi">
+									<a href="${pageContext.request.contextPath }/good/doDetail?id=4">
+										<img src="../img/xiaomi/1.jpg" alt="mi">
 									</a>
 									<div class="carousel-caption"></div>
 								</div>

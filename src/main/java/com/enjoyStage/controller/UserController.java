@@ -22,12 +22,13 @@ public class UserController {
 	public ModelAndView loginRequest(String username, String password){
 		
 		boolean bool = userService.selectByUsername(username, password);
-		
+
 		ModelAndView mv=new ModelAndView();
 		if(bool){
 			mv.addObject("username", username);
 			mv.setViewName("homepage");
 		}else{
+			mv.addObject("bool", bool);
 			mv.setViewName("login");
 		}
 		return mv;
