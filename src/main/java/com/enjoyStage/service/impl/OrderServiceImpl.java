@@ -23,15 +23,5 @@ public class OrderServiceImpl implements IOrderService {
 
 		return false;
 	}
-
-	public boolean insertOrder(String username) {
-		// TODO Auto-generated method stub
-		
-		boolean bool = orderDao.insertOrder(username);
-		if(bool){
-			
-		}
-		return false;
-	}
 	
 }
