@@ -33,106 +33,99 @@
 
 	<div style="background: #f7f7f7">
 		<div style="background: #f7f7f7">
-			<div style="margin:0 40%;">
+			<div style="margin: 0 40%;">
 				<h1>
-					<i class="glyphicon glyphicon-pencil"></i>
-						订单确认
-					</h1>
+					<i class="glyphicon glyphicon-pencil"></i> 订单确认
+				</h1>
 			</div>
 
-	<form id="orderSure" name="orderSure" method="post">
-		<table class="table table-condensed" style="margin:0 25%;width:50%">
-			<tr><td class="success"><h4>
-				<div class="form-group">
-				<div class="input-group">
-					<span class="input-group-addon glyphicon glyphicon-map-marker"></span><input type="text" name="address" class="form-control" maxlength="50" placeholder="您的收货地址" value="${user.username}">
-				</div>
-				</div></h4>
-			</td></tr>
-				
-			<tr><td class="warning">
-				<h4>【金色24期免息】vivo X7 全网通 4GB+64GB 移动联通电信4G手机 金色 4G+64G全网通</h4>
-			</td></tr>
-				
-			<tr><td class="danger row">
-				<div class="col-md-6"><h4>單價：<span>${price}</span></h4></div>
-				<div class="col-md-6"><h4>數量 X 1</h4></div>
-			</td></tr>
-			
-			<tr><td class="active row" >
-				<div class="col-md-6"><h4>分期月数：<span style="color:red">${inlineRadioOptions}</span></h4></div>
-				<div class="col-md-6"><h4>總價：<span style="color: red">${subMoney}元</span></h4></div>
-			</td></tr>
-	
-			<tr><td class="info">
-				<h4 class="col-md-6">月供：<span style="color: red">${monthPay}元</span></h4>
-			</td></tr>
-			
-			<tr><td>
-				<div class="col-md-4" style="float:right">
-					<button type="button" id="submit" class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#pay"><h4>确认订单</h4></button>
-				</div>
-			</td></tr>
-		</table>
-		</form>
-		
-		<div class="modal fade" id="pay" tabindex="-1" role="dialog"
-			aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content" style="background: #9c9">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">
-							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-						</button>
-						<h1 class="modal-title" id="myModalLabel">que支付</h1>
-					</div>
-					<div class="modal-body">
-						<form id="login" name="login" class="pui-form login-form"
-							style="margin-top: 20px"
-							action="${pageContext.request.contextPath }/order/alipayLoad"
-							method="post">
-
-							<div class="pui-form-group">
-								<div role="sid">
-
-									<input type="text" name="username" class="pui-unbordered"
-										maxlength="16" placeholder="您的用户名"> <i
-										class="glyphicon glyphicon-user form-control-feedback"></i>
+			<form id="orderSure" name="orderSure" method="post"
+				action="${pageContext.request.contextPath }/order/alipayLoad">
+				<table class="table table-condensed"
+					style="margin: 0 25%; width: 50%">
+					<tr>
+						<td class="success"><h4>
+								<div class="form-group">
+									<div class="input-group">
+										<span class="input-group-addon glyphicon glyphicon-map-marker"></span><input
+											type="text" name="address" class="form-control"
+											maxlength="50" placeholder="您的收货地址" value="${user.username}">
+									</div>
 								</div>
+							</h4></td>
+					</tr>
+
+					<tr>
+						<td class="warning">
+							<h4>【金色24期免息】vivo X7 全网通 4GB+64GB 移动联通电信4G手机 金色 4G+64G全网通</h4>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="danger row">
+							<div class="col-md-6">
+								<h4>
+									單價：<span>${price}</span>
+								</h4>
 							</div>
-
-							<div class="pui-form-group">
-								<div role="password">
-									<span style="float: left"
-										class="glyphicon glyphicon-lock form-control-feedback"></span>
-									<input type="password" name="password" maxlength="16"
-										class="pui-unbordered" placeholder="您的支付密码" />
-
-								</div>
+							<div class="col-md-6">
+								<h4>數量 X 1</h4>
 							</div>
+						</td>
+					</tr>
 
-							<div class="pui-form-group input_submit">
+					<tr>
+						<td class="active row">
+							<div class="col-md-6">
+								<h4>
+									分期月数：<span style="color: red">${inlineRadioOptions}</span>
+								</h4>
+							</div>
+							<div class="col-md-6">
+								<h4>
+									總價：<span style="color: red">${subMoney}元</span>
+								</h4>
+							</div>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="info">
+							<h4 class="col-md-6">
+								月供：<span style="color: red">${monthPay}元</span>
+							</h4>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<div class="col-md-4" style="float: right">
 								<button type="submit" id="submit"
-									class="pui-btn pui-btn-default pui-btn-block pui-round">确认支付</button>
+									class="btn btn-success btn-lg btn-block" >
+									<h4>确认订单</h4>
+								</button>
 							</div>
-						</form>
-					</div>
-				</div>
-			</div>
+						</td>
+					</tr>
+				</table>
+			</form>
 		</div>
+	</div>
 
-	
-	<footer class="pui-layout pui-layout-fixed pui-layout-fixed-1200 login-footer" style="margin:0 35%">
-		<div class="copyright">
-			<p>
-				Copyright <i class="glyphicon glyphicon-copyright-mark"></i> 2016 趣分期项目 All Rights
-				Reserved.<small class="pui-right"></small>
-			</p>
-		</div>
+
+	<footer
+		class="pui-layout pui-layout-fixed pui-layout-fixed-1200 login-footer"
+		style="margin:0 35%">
+	<div class="copyright">
+		<p>
+			Copyright <i class="glyphicon glyphicon-copyright-mark"></i> 2016
+			趣分期项目 All Rights Reserved.<small class="pui-right"></small>
+		</p>
+	</div>
 	</footer>
-	
-	
-	
+
+
+
 	</div>
 	</div>
 

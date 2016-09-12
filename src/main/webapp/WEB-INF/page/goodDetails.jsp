@@ -9,7 +9,7 @@
 	rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="../css/detail.css">
 </head>
-<body class="container" style="background:#ccc">
+<body class="container" style="background:#1D88E6">
 	<header class="row">
 	<div class="col-sm-12">
 		<h1 id="title">商品页面</h1>
